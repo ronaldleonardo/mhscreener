@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
+
 st.header("Mental disorder screener App")
 data = pd.read_csv("./datasets/Mental_disorder_symptoms.csv")
 
