@@ -2,6 +2,8 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
+import streamlit_toggle as tog
+
 
 
 st.header("Mental disorder screener App")
