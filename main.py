@@ -1,16 +1,12 @@
 import streamlit as st
 import pickle
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import  LabelEncoder
-import  streamlit_toggle as tog
+
 from streamlit_toggle import toggle
-import xgboost as xgb
 import numpy as np
 st.header("Mental disorder screener App")
 data = pd.read_csv("./datasets/Mental_disorder_symptoms.csv")
-#load label encoder
-# encoder = LabelEncoder()
+
 
 # load model
 loaded_model = pickle.load(open("MHSC_RF.sav", "rb"))
