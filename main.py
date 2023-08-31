@@ -11,7 +11,10 @@ data = pd.read_csv("./datasets/Mental_disorder_symptoms.csv")
 
 
 # load model
-loaded_model = pickle.load(open("MHSC_RF.sav", "rb"))
+# loaded_model = pickle.load(open("MHSC_RF.sav", "rb"))
+
+with open("MHSC_RF.sav", "rb") as file:
+    loaded_model = pickle.load(file)
 
 list_variables = ['ag+1:629e','feeling.nervous','panic','breathing.rapidly','sweating','trouble.in.concentration','having.trouble.in.sleeping','having.trouble.with.work','hopelessness','anger','over.react','change.in.eating','suicidal.thought','feeling.tired','close.friend','social.media.addiction','weight.gain','introvert','popping.up.stressful.memory','having.nightmares','avoids.people.or.activities','feeling.negative','trouble.concentrating','blamming.yourself','hallucinations','repetitive.behaviour','increased.energy']
 list_outcomes = ['ADHD','ASD','Loneliness','MDD','OCD','PDD','PTSD','Anxiety','Bipolar','Eating Disorder','Psychotic depression','Sleeping disorder']
